@@ -1,4 +1,4 @@
-# Customize Twenty Twelve for OpenScience.com
+# Customized Twenty Twelve for OpenScience.com
 
 # Twenty Twelve
 
