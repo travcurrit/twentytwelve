@@ -10,7 +10,7 @@ html {
 }
 body {
 	@include rem('font-size', $fsize);
-	font-family: $font-stack;
+	font-family: $title-font;
 	text-rendering: optimizeLegibility;
 	color: $font-color;
 }
@@ -25,12 +25,20 @@ a {
 .assistive-text {
 	display: none;
 }
+
+p {
+  font-family: $content-font;
+}
+#featuredArticle .FA_overall_container_title_nav .FA_featured_articles .FA_article p {
+ font-family: $FA-desc-font;
+ @include rem('font-size', $fsize*1.1);
+}
 /*---------------------------------------------------------
 	Page structure
 ------------------------------------------------------------ */
 #page {
 	@include rem('padding', 0 $vbase);
-	background-color: #fff;
+	background-color: #C3C4C6;
 	@media screen and (min-width: 600px) {
 		@include clear();
 		margin: 0 auto;
@@ -42,14 +50,16 @@ body.custom-background #page {
 		@include rem('padding', 0 40px);
 		@include rem('margin-top', $vbase2);
 		@include rem('margin-bottom', $vbase2);
-		@include box-shadow(0 2px 6px rgba( 100, 100, 100, .3));
 	}
 }
 #main {
 	@include clear();
 }
 #primary {
-	@include rem('margin', $vbase 0 0);
+	@include rem('padding', 10px);
+  @include box-shadow(0 2px 6px rgba( 100, 100, 100, .3));
+  background-color: #fff;
+	//@include rem('margin', $vbase 0 0);
 	@media screen and (min-width: 600px) {
 		float: left;
 		width: percentage(625/960);
@@ -62,11 +72,16 @@ body.custom-background #page {
 		width: 100%;
 	}
 }
+aside {
+	@include rem('padding', 10px);
+  @include box-shadow(0 2px 6px rgba( 100, 100, 100, .3));
+  background-color: #fff;
+}
 #secondary {
-	@include rem('margin', $vbase 0 0);
+	//@include rem('margin', $vbase 0 0);
 	@media screen and (min-width: 600px) {
 		float: right;
-		width: percentage(250/960);
+		width: percentage(292.5/960);
 	}
 }
 /*---------------------------------------------------------
@@ -107,6 +122,7 @@ body.custom-background #page {
 	}
 }
 .header-image {
+  @include box-shadow(0 2px 6px rgba( 100, 100, 100, .3));
 	@include rem('margin-top', $vbase);
 }
 
@@ -114,13 +130,16 @@ body.custom-background #page {
 	Navigation Menu
 ------------------------------------------------------------ */
 nav.main-navigation {
+  @include box-shadow(0 2px 6px rgba( 100, 100, 100, .3));
+  background-color: rgb(121, 122, 126);
 	display: inline-block;
 	@include rem('margin-top', $vbase);
 	width: 100%;
 	@include rem('font-size', 12px);
-	border-top: $divider;
-	border-bottom: $divider;
+	//border-top: $divider;
+	//border-bottom: $divider;
 	ul {
+    float: right;
 		margin: 0;
 		text-indent: 0;
 	}
@@ -137,7 +156,7 @@ nav.main-navigation {
 	}
 	li a {
 		text-transform: uppercase;
-		color: lighten($font-color, 15);
+		color: lighten($nav-font-color, 15);
 		&:hover {
 			color: darken($font-color, 30);
 		}
@@ -188,7 +207,7 @@ nav.main-navigation {
 	.current-menu-ancestor > a,
 	.current_page_item > a,
 	.current_page_ancestor > a {
-		color: lighten($font-color, 12);
+		color: lighten($nav-font-color, 12);
 		font-weight: bold;
 	}
 }
@@ -203,6 +222,12 @@ nav[role="navigation"].main-small-navigation {
 		float: none;
 	}
 	a {
+    @include rem('padding', 1px 10px);
+    text-decoration: none;
+	 @include vertical-gradient($startColor: #f4f4f4, $endColor: #e6e6e6);
+	 border: 1px solid #d2d2d2;
+	 @include border-radius;
+	 @include box-shadow($shadow: 0 1px 2px rgba(64, 64, 64, .10));
 		color: lighten($font-color, 10);
 		&:hover {
 			color: $link-color;

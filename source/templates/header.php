@@ -30,16 +30,17 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 
+		<?php $header_image = get_header_image();
+		if ( ! empty( $header_image ) ) : ?>
+			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+		<?php endif; ?>
+
 		<nav class="site-navigation main-navigation" role="navigation">
 			<h3 class="assistive-text"><?php _e( 'Show navigation', 'twentytwelve' ); ?></h3>
 			<div class="skip-link assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>
 
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-		<?php endif; ?>
 	</header><!-- #masthead -->
 
 	<div id="main">

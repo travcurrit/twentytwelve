@@ -15,6 +15,9 @@
 
 get_header(); ?>
 
+    <div id="featuredArticle">
+      <?php if( function_exists('FA_display_slider') ){ FA_display_slider(7); } ?>
+    </div>
 	<div id="primary">
 		<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>

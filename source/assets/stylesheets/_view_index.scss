@@ -103,7 +103,7 @@ article.sticky {
 	}
 	p {
 		@include rem('margin', 0 0 $vbase 0);
-		line-height: $lheight;
+		line-height: ($lheight*1);
 	}
 	img {
 		&.alignleft {

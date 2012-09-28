@@ -7,8 +7,12 @@ $link-color:           #21759b;
 $link-color-hover:     darken($link-color, 20);
 
 // Fonts
+$nav-font-color:       #fff;
 $font-color:           #444;
-$font-stack:           'Open Sans', Helvetica, Arial, sans-serif;
+$font-stack:           'FengardoNeueBlack', Helvetica, Arial, sans-serif;
+$FA-desc-font:         'FengardoNeueBlack', Times, serif;
+$title-font:           'EconomicaRegular', Times, serif;
+$content-font:         'CrimsonRoman', Times, serif;
 
 //Column widths
 $width-max:            960;

@@ -1,6 +1,9 @@
 /* widgets.css.scss
  * All widget styling
  * ------------------------------------------------------------------ */
+.widget_recent_entries {
+  background-color: black;
+}
 .widget ul ul {
 	@include rem('margin-left', $vbase/2);
 }
@@ -42,4 +45,9 @@
 	li {
 		@include rem('margin', $vbase/2 0);
 	}
+}
+
+#featuredArticle {
+  @include rem('padding-bottom', $vbase/2);
+  @include rem('margin-bottom', $vbase/2);
 }
