@@ -1,4 +1,7 @@
+# Customize Twenty Twelve for OpenScience.com
+
 # Twenty Twelve
+
 
 This was the temporary development home for the WordPress Twenty Twelve theme until July 11, 2012. Now tracking back on [WordPress core Trac](http://core.trac.wordpress.org/).
 
